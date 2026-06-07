@@ -177,3 +177,23 @@ footer a:hover { color: var(--text); }
   background: rgba(232, 255, 0, .8);
   color: var(--bg);
 }
+
+/* result画面のリトライボタン: 丸ではなくテキストボタン */
+.retry-btn {
+  background: transparent;
+  border: 1px solid var(--muted);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  padding: 12px 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color .15s, color .15s;
+}
+
+.retry-btn:hover,
+.retry-btn:active {
+  border-color: var(--text);
+  color: var(--text);
+}
