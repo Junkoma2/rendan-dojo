@@ -61,6 +61,10 @@ main {
   gap: 32px;
 }
 
+.screen[hidden] {
+  display: none;
+}
+
 .description {
   color: var(--muted);
   font-size: 15px;
@@ -196,6 +200,11 @@ footer a:hover { color: var(--text); }
 .retry-btn:active {
   border-color: var(--text);
   color: var(--text);
+}
+.app-version {
+  margin-left: 10px;
+  color: #777;
+  font-size: 0.72rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
