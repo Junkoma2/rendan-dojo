@@ -17,9 +17,17 @@
     <main>
       <div id="screen-ready" class="screen">
         <p class="description">10秒間に何回タップできるか。</p>
+        <p class="best-label">最高記録: <strong id="best-score">0</strong> 回</p>
         <button id="start-btn" class="tap-btn" type="button">
           <span>タップしてスタート</span>
         </button>
+      </div>
+
+      <div id="screen-countdown" class="screen" hidden>
+        <div class="countdown-wrap">
+          <div class="countdown-ring" id="countdown-ring"></div>
+          <span id="countdown-num" class="countdown-num">3</span>
+        </div>
       </div>
 
       <div id="screen-play" class="screen" hidden>
@@ -45,6 +53,7 @@
           <span>回 / 10秒</span>
         </div>
         <p id="result-cps" class="result-cps"></p>
+        <p id="result-best" class="result-best"></p>
         <button id="retry-btn" class="retry-btn" type="button">もう一度</button>
       </div>
     </main>
