@@ -1,0 +1,168 @@
+:root {
+  --bg: #0f0f0f;
+  --surface: #1a1a1a;
+  --accent: #e8ff00;
+  --text: #f0f0f0;
+  --muted: #888;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 480px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.kicker {
+  font-size: 11px;
+  letter-spacing: .2em;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: .05em;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 15px;
+  text-align: center;
+}
+
+.hud {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  width: 100%;
+}
+
+.hud-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.hud-label {
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.hud-value {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+#timer.is-low { color: #ff4444; }
+
+.tap-btn {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  cursor: pointer;
+  transition: transform .08s, background .08s;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tap-btn:active,
+.tap-btn.is-tapped {
+  transform: scale(.93);
+  background: rgba(232, 255, 0, .12);
+}
+
+.tap-btn.is-active {
+  box-shadow: 0 0 32px rgba(232, 255, 0, .25);
+}
+
+.result-reaction {
+  font-size: 28px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.result-score {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.result-score strong {
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.result-score span {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+.result-cps {
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: .05em;
+}
+
+footer {
+  text-align: center;
+  padding-top: 32px;
+}
+
+footer a {
+  color: var(--muted);
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: .1em;
+}
+
+footer a:hover { color: var(--text); }
