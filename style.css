@@ -197,3 +197,12 @@ footer a:hover { color: var(--text); }
   border-color: var(--text);
   color: var(--text);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .tap-btn {
+    transition: none;
+  }
+  .countdown-ring {
+    animation: none;
+  }
+}
