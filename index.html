@@ -26,11 +26,11 @@
         <div class="hud">
           <div class="hud-item">
             <span class="hud-label">カウント</span>
-            <strong id="count" class="hud-value">0</strong>
+            <strong id="count" class="hud-value" aria-live="polite" aria-atomic="true">0</strong>
           </div>
           <div class="hud-item">
             <span class="hud-label">残り時間</span>
-            <strong id="timer" class="hud-value">10</strong>
+            <strong id="timer" class="hud-value" role="timer" aria-live="off">10</strong>
           </div>
         </div>
         <button id="tap-btn" class="tap-btn is-active" type="button">
@@ -39,7 +39,7 @@
       </div>
 
       <div id="screen-result" class="screen" hidden>
-        <p id="result-reaction" class="result-reaction"></p>
+        <p id="result-reaction" class="result-reaction" tabindex="-1"></p>
         <div class="result-score">
           <strong id="result-count"></strong>
           <span>回 / 10秒</span>

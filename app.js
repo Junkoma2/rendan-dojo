@@ -58,6 +58,8 @@ function endGame() {
   resultReaction.textContent = reaction(count);
   resultCps.textContent = (count / DURATION).toFixed(1) + " 回/秒";
   showScreen("result");
+  // 結果画面表示後にフォーカスを移動してスクリーンリーダーに通知
+  setTimeout(() => resultReaction.focus(), 50);
 }
 
 function tap() {
