@@ -206,3 +206,67 @@ footer a:hover { color: var(--text); }
   color: #777;
   font-size: 0.72rem;
 }
+
+/* ---- 最高記録 ---- */
+.best-label {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: .05em;
+}
+
+.best-label strong {
+  color: var(--accent);
+}
+
+.result-best {
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: .05em;
+}
+
+.result-best.is-new {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---- カウントダウン ---- */
+.countdown-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  animation: ring-expand 1s ease-out forwards;
+}
+
+@keyframes ring-expand {
+  0%   { transform: scale(.2); opacity: 1; }
+  100% { transform: scale(1);  opacity: .2; }
+}
+
+.countdown-num {
+  font-size: 100px;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tap-btn {
+    transition: none;
+  }
+  .countdown-ring {
+    animation: none;
+  }
+}
